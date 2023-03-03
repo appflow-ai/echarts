@@ -1,17 +1,18 @@
-name: Publish Nightly
+name: Publish
 
 on:
-  schedule:
-    - cron: '0 9 * * *' # After zrender nightly published
-  # committers can manually trigger with workflow_dispatch
-  workflow_dispatch: {}
-  repository_dispatch:
-    types: publish-nightly
+  push:
+    branches:
+      - master
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: ${{ github.repository_owner == 'apache' }}
+    if: ${{ github.repository_owner == 'appflow-ai' }}
+
+    permissions:
+      contents: read
+      packages: write
 
     strategy:
       matrix:
@@ -22,7 +23,7 @@ jobs:
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
-          registry-url: https://registry.npmjs.org/
+          registry-url: https://npm.pkg.github.com
       - name: Setup and publish nightly
         run: |
           node build/nightly/prepare.js
@@ -33,6 +34,6 @@ jobs:
           npm run release
           npm run test
           npm run test:dts
-          npm publish
+          npm run publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
