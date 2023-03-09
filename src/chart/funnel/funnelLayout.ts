@@ -280,7 +280,7 @@ export default function funnelLayout(ecModel: GlobalModel, api: ExtensionAPI) {
         const valueArr = data.mapArray(valueDim, function (val: number) {
             return val;
         });
-        const valueSum = valueArr.reduce((pre, cur) => pre + cur);
+        const valueSum = valueArr.reduce((pre, cur) => pre + cur, 0);
         // direction about
         const sort = seriesModel.get('sort');
         const orient = seriesModel.get('orient');
