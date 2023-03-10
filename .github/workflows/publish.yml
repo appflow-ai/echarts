@@ -24,16 +24,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           registry-url: https://npm.pkg.github.com
-      - name: Setup and publish nightly
-        run: |
-          node build/nightly/prepare.js
-          npm i zrender@npm:zrender-nightly
-          npm ci
-          npm ls zrender
-          node build/nightly/post.js
-          npm run release
-          npm run test
-          npm run test:dts
-          npm publish
+      - run: npm ci
+      - run: npm run release
+      - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
