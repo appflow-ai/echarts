@@ -1,72 +1,21 @@
-<!-- Please fill in the following information to help us review your PR more efficiently. -->
+# Description
 
-## Brief Information
+Please include a summary of the change and which issue is fixed. Please also include relevant motivation and context. List any dependencies that are required for this change.
 
-This pull request is in the type of:
+Fixes # (issue)
 
-- [ ] bug fixing
-- [ ] new feature
-- [ ] others
+# How Has This Been Tested?
 
+Please describe the tests that you ran to verify your changes. Please also note any relevant details for your test configuration.
 
+- [ ] Test A
+- [ ] Test B
 
-### What does this PR do?
+# Checklist:
 
-<!-- USE ONE SENTENCE TO DESCRIBE WHAT THIS PR DOES. -->
-
-
-
-### Fixed issues
-
-<!--
-- #xxxx: ...
--->
-
-
-## Details
-
-### Before: What was the problem?
-
-<!-- DESCRIBE THE BUG OR REQUIREMENT HERE. -->
-
-<!-- ADD SCREENSHOT HERE IF APPLICABLE. -->
-
-
-
-### After: How does it behave after the fixing?
-
-<!-- THE RESULT AFTER FIXING AND A SIMPLE EXPLANATION ABOUT HOW IT IS FIXED. -->
-
-<!-- ADD SCREENSHOT HERE IF APPLICABLE. -->
-
-
-
-## Document Info
-
-One of the following should be checked.
-
-- [ ] This PR doesn't relate to document changes
-- [ ] The document should be updated later
-- [ ] The document changes have been made in apache/echarts-doc#xxx
-
-
-
-## Misc
-
-### ZRender Changes
-
-- [ ] This PR depends on ZRender changes (ecomfe/zrender#xxx).
-
-### Related test cases or examples to use the new APIs
-
-N.A.
-
-
-
-## Others
-
-### Merging options
-
-- [ ] Please squash the commits into a single one when merging.
-
-### Other information
+- [ ] My code follows the style guidelines of this project
+- [ ] I have performed a self-review of my own code
+- [ ] I have commented my code, particularly in hard-to-understand areas
+- [ ] I have made corresponding changes to the documentation
+- [ ] My changes generate no new warnings
+- [ ] Any dependent changes have been merged and published in downstream modules
