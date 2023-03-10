@@ -34,6 +34,6 @@ jobs:
           npm run release
           npm run test
           npm run test:dts
-          npm run publish
+          npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
